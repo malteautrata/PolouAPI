@@ -1,0 +1,120 @@
+\hypertarget{classIServoMotor}{}\doxysection{IServo\+Motor Class Reference}
+\label{classIServoMotor}\index{IServoMotor@{IServoMotor}}
+
+
+Interface to control a servo motor. The interface provides the basic functions for the control for a specific servo motor.  
+
+
+
+
+{\ttfamily \#include $<$Servo\+Motor.\+hpp$>$}
+
+
+
+Inheritance diagram for IServo\+Motor\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual short \mbox{\hyperlink{classIServoMotor_aef7f6a5804011ba2664866fade36db69}{set\+Position\+In\+Deg}} (short new\+Position)=0
+\begin{DoxyCompactList}\small\item\em Moves the servo motor to the given position. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classIServoMotor_a9bd9bef64c7f9f4d52b063115043cda0}{set\+Position\+In\+Rad}} (float new\+Position)=0
+\begin{DoxyCompactList}\small\item\em Moves the servo motor to the given position. \end{DoxyCompactList}\item 
+virtual short \mbox{\hyperlink{classIServoMotor_a6ae12d71e04f5c6e5e4561220b754501}{get\+Position\+In\+Deg}} ()=0
+\begin{DoxyCompactList}\small\item\em Delivers the position value (in degree) the servo trageted at. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classIServoMotor_ab7e5752ab536a157ed3236315bfb5fbb}{get\+Position\+In\+Rad}} ()=0
+\begin{DoxyCompactList}\small\item\em Delivers the position value (in radian) the servo trageted at. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIServoMotor_aef555de545e95a379a96d31a8332f861}\label{classIServoMotor_aef555de545e95a379a96d31a8332f861}} 
+virtual void \mbox{\hyperlink{classIServoMotor_aef555de545e95a379a96d31a8332f861}{show\+Pololu\+Values}} (unsigned short \&min, unsigned short \&mid, unsigned short \&max)=0
+\begin{DoxyCompactList}\small\item\em Shows which settings have to be made in the \mbox{\hyperlink{classPololu}{Pololu}} Maestro Control Center for the servo, based on the starting position and the delta for the specific servo. See \mbox{\hyperlink{classPololu}{Pololu}} manual for further explainations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to control a servo motor. The interface provides the basic functions for the control for a specific servo motor. 
+
+Note, different types of servo motors have different specification with respect to working range and the counting of position units representing certain motor positions. Furthermore, implementation of this interface can also differe because of the boards used to drive the servo motors. These parameters (working area and units) must be specified / documented in the derived classes that implement these methods. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIServoMotor_a6ae12d71e04f5c6e5e4561220b754501}\label{classIServoMotor_a6ae12d71e04f5c6e5e4561220b754501}} 
+\index{IServoMotor@{IServoMotor}!getPositionInDeg@{getPositionInDeg}}
+\index{getPositionInDeg@{getPositionInDeg}!IServoMotor@{IServoMotor}}
+\doxysubsubsection{\texorpdfstring{getPositionInDeg()}{getPositionInDeg()}}
+{\footnotesize\ttfamily virtual short IServo\+Motor\+::get\+Position\+In\+Deg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the position value (in degree) the servo trageted at. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotor_af059dccc8bcf6685324544c73a87980b}{Servo\+Motor}}.
+
+\mbox{\Hypertarget{classIServoMotor_ab7e5752ab536a157ed3236315bfb5fbb}\label{classIServoMotor_ab7e5752ab536a157ed3236315bfb5fbb}} 
+\index{IServoMotor@{IServoMotor}!getPositionInRad@{getPositionInRad}}
+\index{getPositionInRad@{getPositionInRad}!IServoMotor@{IServoMotor}}
+\doxysubsubsection{\texorpdfstring{getPositionInRad()}{getPositionInRad()}}
+{\footnotesize\ttfamily virtual float IServo\+Motor\+::get\+Position\+In\+Rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the position value (in radian) the servo trageted at. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotor_ad383a378c2993718d4528fd89087c155}{Servo\+Motor}}.
+
+\mbox{\Hypertarget{classIServoMotor_aef7f6a5804011ba2664866fade36db69}\label{classIServoMotor_aef7f6a5804011ba2664866fade36db69}} 
+\index{IServoMotor@{IServoMotor}!setPositionInDeg@{setPositionInDeg}}
+\index{setPositionInDeg@{setPositionInDeg}!IServoMotor@{IServoMotor}}
+\doxysubsubsection{\texorpdfstring{setPositionInDeg()}{setPositionInDeg()}}
+{\footnotesize\ttfamily virtual short IServo\+Motor\+::set\+Position\+In\+Deg (\begin{DoxyParamCaption}\item[{short}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Moves the servo motor to the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & unsigned short position value given in degree.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual position set in degree. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotor_a5b016d874b4ed38fe06a4dd5dd3342fd}{Servo\+Motor}}.
+
+\mbox{\Hypertarget{classIServoMotor_a9bd9bef64c7f9f4d52b063115043cda0}\label{classIServoMotor_a9bd9bef64c7f9f4d52b063115043cda0}} 
+\index{IServoMotor@{IServoMotor}!setPositionInRad@{setPositionInRad}}
+\index{setPositionInRad@{setPositionInRad}!IServoMotor@{IServoMotor}}
+\doxysubsubsection{\texorpdfstring{setPositionInRad()}{setPositionInRad()}}
+{\footnotesize\ttfamily virtual float IServo\+Motor\+::set\+Position\+In\+Rad (\begin{DoxyParamCaption}\item[{float}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Moves the servo motor to the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & unsigned short position value given in radian.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual position set in radian 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotor_aff841d562491cb6c347a0c148ffa0c6b}{Servo\+Motor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Servo\+Motor.\+hpp\end{DoxyCompactItemize}

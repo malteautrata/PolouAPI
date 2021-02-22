@@ -1,0 +1,138 @@
+\hypertarget{classSerialComLINUX}{}\doxysection{Serial\+Com\+LINUX Class Reference}
+\label{classSerialComLINUX}\index{SerialComLINUX@{SerialComLINUX}}
+
+
+Inheritance diagram for Serial\+Com\+LINUX\+:
+% FIG 0
+
+
+Collaboration diagram for Serial\+Com\+LINUX\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSerialComLINUX_aa0d54938fe48039dc18785ca6d9538ff}{Serial\+Com\+LINUX}} (const char $\ast$port\+Name=\char`\"{}/dev/tty\+ACM0\char`\"{}, unsigned short baud\+Rate=9600)
+\item 
+void \mbox{\hyperlink{classSerialComLINUX_a3969e919017724bf151ca433a9c4c52c}{init\+Serial\+Com}} (const char $\ast$port\+Name=\char`\"{}/dev/tty\+ACM0\char`\"{}, unsigned short baud\+Rate=9600)
+\begin{DoxyCompactList}\small\item\em Used to initiate the \mbox{\hyperlink{classSerialCom}{Serial\+Com}} object with port name and baud rate. The function puts the object in the same state as the constructor with transfer parameters. It can be used to change the port name and the baud rate of a \mbox{\hyperlink{classSerialCom}{Serial\+Com}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSerialComLINUX_a5e1293331b119354ddac6f1c6e104252}{open\+Serial\+Com}} ()
+\begin{DoxyCompactList}\small\item\em Opens the serial com defined by the init\+Serial\+Com(...) method or the constructor parameter. If the port can be successfully be opened the method retuns true. If an error occurs an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. If the serial com is already open an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSerialComLINUX_aeef058fc40479698cdf94efadb9ca457}{close\+Serial\+Com}} ()
+\begin{DoxyCompactList}\small\item\em Closes a serial connection. If an error occurs an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSerialComLINUX_aeb8710a98c8c7910d1751d509c9074b2}{write\+Serial\+Com}} (unsigned char command\mbox{[}$\,$\mbox{]}, unsigned short size\+Command, unsigned char $\ast$response, unsigned short size\+Response)
+\begin{DoxyCompactList}\small\item\em This method is used to write commands to and read response from the controller via the open serial connection. If the serial port is not open an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. If writing or reading fails, an exception is thrown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSerialComLINUX_ae4de97a150d5e74e6fe985f02ac1685e}\label{classSerialComLINUX_ae4de97a150d5e74e6fe985f02ac1685e}} 
+int {\bfseries get\+Port} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSerialComLINUX_a0462255871037cb46c14370c62e23ff8}\label{classSerialComLINUX_a0462255871037cb46c14370c62e23ff8}} 
+int {\bfseries port\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSerialComLINUX_aa0d54938fe48039dc18785ca6d9538ff}\label{classSerialComLINUX_aa0d54938fe48039dc18785ca6d9538ff}} 
+\index{SerialComLINUX@{SerialComLINUX}!SerialComLINUX@{SerialComLINUX}}
+\index{SerialComLINUX@{SerialComLINUX}!SerialComLINUX@{SerialComLINUX}}
+\doxysubsubsection{\texorpdfstring{SerialComLINUX()}{SerialComLINUX()}}
+{\footnotesize\ttfamily Serial\+Com\+LINUX\+::\+Serial\+Com\+LINUX (\begin{DoxyParamCaption}\item[{const char $\ast$}]{port\+Name = {\ttfamily \char`\"{}/dev/ttyACM0\char`\"{}},  }\item[{unsigned short}]{baud\+Rate = {\ttfamily 9600} }\end{DoxyParamCaption})}
+
+Implementation of the serial com class for LINUX 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSerialComLINUX_aeef058fc40479698cdf94efadb9ca457}\label{classSerialComLINUX_aeef058fc40479698cdf94efadb9ca457}} 
+\index{SerialComLINUX@{SerialComLINUX}!closeSerialCom@{closeSerialCom}}
+\index{closeSerialCom@{closeSerialCom}!SerialComLINUX@{SerialComLINUX}}
+\doxysubsubsection{\texorpdfstring{closeSerialCom()}{closeSerialCom()}}
+{\footnotesize\ttfamily bool Serial\+Com\+LINUX\+::close\+Serial\+Com (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Closes a serial connection. If an error occurs an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. 
+
+\begin{DoxyReturn}{Returns}
+Returns true on successful closing of a serial connection. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerialCom_a2b6aa497a81e3025af01efaf267da4a0}{ISerial\+Com}}.
+
+\mbox{\Hypertarget{classSerialComLINUX_a3969e919017724bf151ca433a9c4c52c}\label{classSerialComLINUX_a3969e919017724bf151ca433a9c4c52c}} 
+\index{SerialComLINUX@{SerialComLINUX}!initSerialCom@{initSerialCom}}
+\index{initSerialCom@{initSerialCom}!SerialComLINUX@{SerialComLINUX}}
+\doxysubsubsection{\texorpdfstring{initSerialCom()}{initSerialCom()}}
+{\footnotesize\ttfamily void Serial\+Com\+LINUX\+::init\+Serial\+Com (\begin{DoxyParamCaption}\item[{const char $\ast$}]{port\+Name = {\ttfamily \char`\"{}/dev/ttyACM0\char`\"{}},  }\item[{unsigned short}]{baud\+Rate = {\ttfamily 9600} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to initiate the \mbox{\hyperlink{classSerialCom}{Serial\+Com}} object with port name and baud rate. The function puts the object in the same state as the constructor with transfer parameters. It can be used to change the port name and the baud rate of a \mbox{\hyperlink{classSerialCom}{Serial\+Com}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & \+: The port name is used to open a serial connection via the port name for the controller specified by the operating system. \\
+\hline
+{\em baud\+Rate} & \+: The baud rate determines the transmission speed at which communication between the PC and controller takes place. \\
+\hline
+\end{DoxyParams}
+$<$ Before a serial connection is reinitialized, a possible open connection is closed.
+
+Implements \mbox{\hyperlink{classISerialCom_a65b1a5ddaa7180ce961e44942a9c68bd}{ISerial\+Com}}.
+
+\mbox{\Hypertarget{classSerialComLINUX_a5e1293331b119354ddac6f1c6e104252}\label{classSerialComLINUX_a5e1293331b119354ddac6f1c6e104252}} 
+\index{SerialComLINUX@{SerialComLINUX}!openSerialCom@{openSerialCom}}
+\index{openSerialCom@{openSerialCom}!SerialComLINUX@{SerialComLINUX}}
+\doxysubsubsection{\texorpdfstring{openSerialCom()}{openSerialCom()}}
+{\footnotesize\ttfamily bool Serial\+Com\+LINUX\+::open\+Serial\+Com (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Opens the serial com defined by the init\+Serial\+Com(...) method or the constructor parameter. If the port can be successfully be opened the method retuns true. If an error occurs an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. If the serial com is already open an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. 
+
+\begin{DoxyReturn}{Returns}
+Returns TRUE on successful opening of a serial connection. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classIException}{IException}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classISerialCom_a99dd2c8ee5c40f0fdd931d510dcd53cc}{ISerial\+Com}}.
+
+\mbox{\Hypertarget{classSerialComLINUX_aeb8710a98c8c7910d1751d509c9074b2}\label{classSerialComLINUX_aeb8710a98c8c7910d1751d509c9074b2}} 
+\index{SerialComLINUX@{SerialComLINUX}!writeSerialCom@{writeSerialCom}}
+\index{writeSerialCom@{writeSerialCom}!SerialComLINUX@{SerialComLINUX}}
+\doxysubsubsection{\texorpdfstring{writeSerialCom()}{writeSerialCom()}}
+{\footnotesize\ttfamily bool Serial\+Com\+LINUX\+::write\+Serial\+Com (\begin{DoxyParamCaption}\item[{unsigned char}]{command\mbox{[}$\,$\mbox{]},  }\item[{unsigned short}]{size\+Command,  }\item[{unsigned char $\ast$}]{response,  }\item[{unsigned short}]{size\+Response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This method is used to write commands to and read response from the controller via the open serial connection. If the serial port is not open an exception (\mbox{\hyperlink{classIException}{IException}}) is thrown. If writing or reading fails, an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\mbox{[}$\,$\mbox{]}} & \+: Contains the command to be sent (size of 1, 2 or 4 bytes, depending on the command).\\
+\hline
+{\em size\+Command} & \+: Contains the size (in bytes) of the command (1, 2 or 4).\\
+\hline
+{\em response} & \+: Array of the given size (size\+Response) where the response of the micro-\/controller can be / is stored. If no return value is expected, the pointer can be NULL.\\
+\hline
+{\em size\+Response} & \+: Contains the size of the command (1 or 2, in case of no response is expected the value has to be 0). Thus, a size\+Response value of 0 indicates that no response from the micro-\/controller will be read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if writing / and reading was done successfully. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerialCom_acf07955f8f6bdb4118b8c4551e264d24}{ISerial\+Com}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Serial\+Com.\+hpp\item 
+Serial\+Com.\+cpp\end{DoxyCompactItemize}

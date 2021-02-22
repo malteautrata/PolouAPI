@@ -1,0 +1,77 @@
+\hypertarget{classIServoMotoBaseAdv}{}\doxysection{IServo\+Moto\+Base\+Adv Class Reference}
+\label{classIServoMotoBaseAdv}\index{IServoMotoBaseAdv@{IServoMotoBaseAdv}}
+
+
+Interface class that specifies additional functionality with respect to set maximal speed and acceleration.  
+
+
+
+
+{\ttfamily \#include $<$Servo\+Motor.\+hpp$>$}
+
+
+
+Inheritance diagram for IServo\+Moto\+Base\+Adv\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotoBaseAdv_aa60392836e1a2df4495c94bbc10938f6}{set\+Speed}} (unsigned short new\+Speed)=0
+\begin{DoxyCompactList}\small\item\em Sets the maximal speed the servo shall move. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotoBaseAdv_a7947dc75b733fefaa9b9ce010fb5ec8d}{set\+Acceleration}} (unsigned short new\+Acceleration)=0
+\begin{DoxyCompactList}\small\item\em Sets the maximal acceleration the servo shall move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface class that specifies additional functionality with respect to set maximal speed and acceleration. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIServoMotoBaseAdv_a7947dc75b733fefaa9b9ce010fb5ec8d}\label{classIServoMotoBaseAdv_a7947dc75b733fefaa9b9ce010fb5ec8d}} 
+\index{IServoMotoBaseAdv@{IServoMotoBaseAdv}!setAcceleration@{setAcceleration}}
+\index{setAcceleration@{setAcceleration}!IServoMotoBaseAdv@{IServoMotoBaseAdv}}
+\doxysubsubsection{\texorpdfstring{setAcceleration()}{setAcceleration()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Moto\+Base\+Adv\+::set\+Acceleration (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Acceleration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the maximal acceleration the servo shall move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short new\+Acceleration (the meaning of the values has to be specified in the derived class.)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual accelaration value set. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBaseAdv_ae764422a9e11ea2adaaa1dbf8787e92b}{Servo\+Motor\+Pololu\+Base\+Adv}}.
+
+\mbox{\Hypertarget{classIServoMotoBaseAdv_aa60392836e1a2df4495c94bbc10938f6}\label{classIServoMotoBaseAdv_aa60392836e1a2df4495c94bbc10938f6}} 
+\index{IServoMotoBaseAdv@{IServoMotoBaseAdv}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!IServoMotoBaseAdv@{IServoMotoBaseAdv}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Moto\+Base\+Adv\+::set\+Speed (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the maximal speed the servo shall move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short new\+Speed (the meaning of the values has to be specified in the derived class.)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual speed value set. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBaseAdv_abe82c2cf7eb11e20676096061e4afc6c}{Servo\+Motor\+Pololu\+Base\+Adv}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Servo\+Motor.\+hpp\end{DoxyCompactItemize}

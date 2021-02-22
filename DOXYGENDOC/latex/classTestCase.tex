@@ -1,0 +1,84 @@
+\hypertarget{classTestCase}{}\doxysection{Test\+Case Class Reference}
+\label{classTestCase}\index{TestCase@{TestCase}}
+
+
+Implementation of the class for defining a test case.  
+
+
+
+
+{\ttfamily \#include $<$Simpl\+Unit\+Test\+FW.\+hpp$>$}
+
+
+
+Inheritance diagram for Test\+Case\+:
+% FIG 0
+
+
+Collaboration diagram for Test\+Case\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTestCase_a317279b1036fc0c9742f8af911f3265b}{Test\+Case}} (string s=string(\char`\"{}undefined test case\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTestCase_ad23e00c52ec3aab2aeb8a1b41c8382d2}\label{classTestCase_ad23e00c52ec3aab2aeb8a1b41c8382d2}} 
+void \mbox{\hyperlink{classTestCase_ad23e00c52ec3aab2aeb8a1b41c8382d2}{test\+Execution}} ()
+\begin{DoxyCompactList}\small\item\em Starts the execution of the defined test. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTestCase_a76c1fda3ab2f8f09ba8d43e58096bd0a}{to\+Xml\+Str}} ()
+\begin{DoxyCompactList}\small\item\em Returns specific output format of the single test result for documentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTestCase_a625c0b709cb67efc051b15bdf829eaf5}\label{classTestCase_a625c0b709cb67efc051b15bdf829eaf5}} 
+virtual bool \mbox{\hyperlink{classTestCase_a625c0b709cb67efc051b15bdf829eaf5}{test\+Run}} ()
+\begin{DoxyCompactList}\small\item\em This method implements through overriding in the derived classes the concrete test. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the class for defining a test case. 
+
+A test case is the instance that represents / implements a single test. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTestCase_a317279b1036fc0c9742f8af911f3265b}\label{classTestCase_a317279b1036fc0c9742f8af911f3265b}} 
+\index{TestCase@{TestCase}!TestCase@{TestCase}}
+\index{TestCase@{TestCase}!TestCase@{TestCase}}
+\doxysubsubsection{\texorpdfstring{TestCase()}{TestCase()}}
+{\footnotesize\ttfamily Test\+Case\+::\+Test\+Case (\begin{DoxyParamCaption}\item[{string}]{s = {\ttfamily string(\char`\"{}undefined~test~case\char`\"{})} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & string name if the test case. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTestCase_a76c1fda3ab2f8f09ba8d43e58096bd0a}\label{classTestCase_a76c1fda3ab2f8f09ba8d43e58096bd0a}} 
+\index{TestCase@{TestCase}!toXmlStr@{toXmlStr}}
+\index{toXmlStr@{toXmlStr}!TestCase@{TestCase}}
+\doxysubsubsection{\texorpdfstring{toXmlStr()}{toXmlStr()}}
+{\footnotesize\ttfamily string Test\+Case\+::to\+Xml\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns specific output format of the single test result for documentation. 
+
+\begin{DoxyReturn}{Returns}
+string contains the output for test documentation. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classITestItem_a6f6457efebeabf2404e4ca6f207b3c51}{ITest\+Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simpl\+Unit\+Test\+FW.\+hpp\end{DoxyCompactItemize}

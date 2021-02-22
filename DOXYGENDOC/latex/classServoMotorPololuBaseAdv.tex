@@ -1,0 +1,103 @@
+\hypertarget{classServoMotorPololuBaseAdv}{}\doxysection{Servo\+Motor\+Pololu\+Base\+Adv Class Reference}
+\label{classServoMotorPololuBaseAdv}\index{ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}}
+
+
+Implements the interface \mbox{\hyperlink{classIServoMotoBaseAdv}{IServo\+Moto\+Base\+Adv}} derived from class \mbox{\hyperlink{classServoMotorPololuBase}{Servo\+Motor\+Pololu\+Base}}.  
+
+
+
+
+{\ttfamily \#include $<$Servo\+Motor.\+hpp$>$}
+
+
+
+Inheritance diagram for Servo\+Motor\+Pololu\+Base\+Adv\+:
+% FIG 0
+
+
+Collaboration diagram for Servo\+Motor\+Pololu\+Base\+Adv\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServoMotorPololuBaseAdv_acec5aa3af7bf52d0f1f1b64091bf3fa4}{Servo\+Motor\+Pololu\+Base\+Adv}} (unsigned short servo\+ID, unsigned short neutral\+Pos, unsigned short delta, \mbox{\hyperlink{classIPololu}{IPololu}} $\ast$pololu\+Controller)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. In case of an error an exception is thrown. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBaseAdv_abe82c2cf7eb11e20676096061e4afc6c}{set\+Speed}} (unsigned short new\+Speed)
+\begin{DoxyCompactList}\small\item\em Set the maximal speed of the servo motor movement. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBaseAdv_ae764422a9e11ea2adaaa1dbf8787e92b}{set\+Acceleration}} (unsigned short new\+Acceleration)
+\begin{DoxyCompactList}\small\item\em Set the maximal acceleration of the servo motor movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implements the interface \mbox{\hyperlink{classIServoMotoBaseAdv}{IServo\+Moto\+Base\+Adv}} derived from class \mbox{\hyperlink{classServoMotorPololuBase}{Servo\+Motor\+Pololu\+Base}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classServoMotorPololuBaseAdv_acec5aa3af7bf52d0f1f1b64091bf3fa4}\label{classServoMotorPololuBaseAdv_acec5aa3af7bf52d0f1f1b64091bf3fa4}} 
+\index{ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}!ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}}
+\index{ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}!ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}}
+\doxysubsubsection{\texorpdfstring{ServoMotorPololuBaseAdv()}{ServoMotorPololuBaseAdv()}}
+{\footnotesize\ttfamily Servo\+Motor\+Pololu\+Base\+Adv\+::\+Servo\+Motor\+Pololu\+Base\+Adv (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{neutral\+Pos,  }\item[{unsigned short}]{delta,  }\item[{\mbox{\hyperlink{classIPololu}{IPololu}} $\ast$}]{pololu\+Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. In case of an error an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+ID} & unsigned short. Index ($>$= 0) of the servo motor that identifies which slot / pin on the micro controller board the servo is connected with.\\
+\hline
+{\em neutral\+Pos} & unsigned short. (neutral\+Pos $>$ 0) Neutral position of the servo, usually defined by an impulse of 1\textquotesingle{}500 micro seconds impulse length. The position value is usually given by impulse length per one micro seconds. Using the pololu micro-\/controller to control the servor motor the impulse length is given per units of 1/4 of a quarter of the micro-\/second. Therefore, position here is defined impulse length per one micro second per 1/4 micro second. Thus, position value = impulse lengths $\ast$ 4 (units). See \mbox{\hyperlink{classPololu}{Pololu}} manual for further explanations.\\
+\hline
+{\em delta} & unsigned short. (delta $<$ neutral\+Pos) Defines the range of positions values, starting from the neutral positions +/-\/ delta.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}\param *pololuController. Pointer to a pololu instance that controls the servo motors.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classServoMotorPololuBaseAdv_ae764422a9e11ea2adaaa1dbf8787e92b}\label{classServoMotorPololuBaseAdv_ae764422a9e11ea2adaaa1dbf8787e92b}} 
+\index{ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}!setAcceleration@{setAcceleration}}
+\index{setAcceleration@{setAcceleration}!ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}}
+\doxysubsubsection{\texorpdfstring{setAcceleration()}{setAcceleration()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+Adv\+::set\+Acceleration (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Acceleration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the maximal acceleration of the servo motor movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Speed} & unsigned short. Value 1 represents the lowest speed. Value 255 and 0 represent the maximal speed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIServoMotoBaseAdv_a7947dc75b733fefaa9b9ce010fb5ec8d}{IServo\+Moto\+Base\+Adv}}.
+
+\mbox{\Hypertarget{classServoMotorPololuBaseAdv_abe82c2cf7eb11e20676096061e4afc6c}\label{classServoMotorPololuBaseAdv_abe82c2cf7eb11e20676096061e4afc6c}} 
+\index{ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!ServoMotorPololuBaseAdv@{ServoMotorPololuBaseAdv}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+Adv\+::set\+Speed (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the maximal speed of the servo motor movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Speed} & unsigned short. Value 1 represents the lowest speed. Value 255 and 0 represent the maximal speed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIServoMotoBaseAdv_aa60392836e1a2df4495c94bbc10938f6}{IServo\+Moto\+Base\+Adv}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Servo\+Motor.\+hpp\item 
+Servo\+Motor.\+cpp\end{DoxyCompactItemize}

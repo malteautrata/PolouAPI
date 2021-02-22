@@ -1,0 +1,273 @@
+\hypertarget{classPololu}{}\doxysection{Pololu Class Reference}
+\label{classPololu}\index{Pololu@{Pololu}}
+
+
+Class that implements the interface \mbox{\hyperlink{classIPololu}{IPololu}} for a \mbox{\hyperlink{classPololu}{Pololu}} board that creates and manages serial communication object and provides basic functions for programming the controller.  
+
+
+
+
+{\ttfamily \#include $<$Pololu.\+hpp$>$}
+
+
+
+Inheritance diagram for Pololu\+:
+% FIG 0
+
+
+Collaboration diagram for Pololu\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPololu_a9712aa40998c72d73dcbb925be65e656}{Pololu}} (const char $\ast$port\+Name, unsigned short baud\+Rate)
+\begin{DoxyCompactList}\small\item\em Constructor tries to open serial communication port having specified port name and baud rate. If the communication channel cannot be opened then a exception is thrown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPololu_a97e9fe7c507acfaedbb640e3682cec6d}\label{classPololu_a97e9fe7c507acfaedbb640e3682cec6d}} 
+\mbox{\hyperlink{classPololu_a97e9fe7c507acfaedbb640e3682cec6d}{$\sim$\+Pololu}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Closes the serial communicaton channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPololu_a9df8efb22b92bbff7b01dd539930c207}{init\+Connection}} (const char $\ast$port\+Name, unsigned short baud\+Rate)
+\begin{DoxyCompactList}\small\item\em Used to change the connection data. If the communication channel is open then the channel is closed first. The new connection parameters are set, but the channel will not be opened. To open the channel the method open\+Connection has to be called first. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPololu_ad002d2eada218f15cdf72b3428097cb2}{open\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Opens the serial connection with the currently specified parameter (see method init\+Connection(...)). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPololu_a20893d84c4fdc562cbb83a18785e7c4a}{close\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Closes the serial connection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPololu_a508ff1ad49e25731a80048197568723b}{get\+Moving\+State}} ()
+\begin{DoxyCompactList}\small\item\em Returns the moving state of all motors the control board is connected with. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classPololu_ae365c943d44a08ce45fccafa4f91781a}{get\+Errors}} ()
+\begin{DoxyCompactList}\small\item\em Reads and returns all currently detected error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \mbox{\hyperlink{classPololu_a1f24fec8da27e5e0e40fb24b88e70858}{set\+Position}} (unsigned short servo, unsigned short go\+To\+Position)
+\begin{DoxyCompactList}\small\item\em Moves motor to the specified position. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPololu_aa990539f5c36628ea0dde3b5c0618128}{set\+Speed}} (unsigned short servo, unsigned short go\+To\+Speed)
+\begin{DoxyCompactList}\small\item\em Sets the maximal speed of the specified servo motor. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPololu_af7993f6d66786503c017682730a0e3dd}{set\+Acceleration}} (unsigned short servo, unsigned short go\+To\+Acceleration)
+\begin{DoxyCompactList}\small\item\em Sets the maximal acceleration of the specified servo motor. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classPololu_a51a9914e19918b4c43c9ec58da59147c}{get\+Position}} (unsigned short servo)
+\begin{DoxyCompactList}\small\item\em Delivers the position value the specified motor is target at. If an error occurs an exception is thrown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPololu_a7cce7354fa89281c29c5c3a453207243}\label{classPololu_a7cce7354fa89281c29c5c3a453207243}} 
+\mbox{\hyperlink{classSerialCom}{Serial\+Com}} $\ast$ {\bfseries serial\+Com\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{classPololu_aeb681b4f2f39a1bf9e2df0155d9f44db}\label{classPololu_aeb681b4f2f39a1bf9e2df0155d9f44db}} 
+bool {\bfseries is\+Com\+Port\+Open\+\_\+} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPololu_a77dc4790fe601a910d307dedc9abbe26}\label{classPololu_a77dc4790fe601a910d307dedc9abbe26}} 
+class {\bfseries Servo\+Motor}
+\item 
+\mbox{\Hypertarget{classPololu_abded949d5e79df7e6578097df11835e0}\label{classPololu_abded949d5e79df7e6578097df11835e0}} 
+class {\bfseries Servo\+Motor\+Pololu\+Base}
+\item 
+\mbox{\Hypertarget{classPololu_a579aaf793c5c2b0572d2a7db97ed4b54}\label{classPololu_a579aaf793c5c2b0572d2a7db97ed4b54}} 
+class {\bfseries Servo\+Motor\+Pololu\+Base\+Adv}
+\item 
+\mbox{\Hypertarget{classPololu_a9e04c6c43a3a691f1a19764f7e84d9c7}\label{classPololu_a9e04c6c43a3a691f1a19764f7e84d9c7}} 
+class {\bfseries Servo\+Motor\+Pololu}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that implements the interface \mbox{\hyperlink{classIPololu}{IPololu}} for a \mbox{\hyperlink{classPololu}{Pololu}} board that creates and manages serial communication object and provides basic functions for programming the controller. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPololu_a9712aa40998c72d73dcbb925be65e656}\label{classPololu_a9712aa40998c72d73dcbb925be65e656}} 
+\index{Pololu@{Pololu}!Pololu@{Pololu}}
+\index{Pololu@{Pololu}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{Pololu()}{Pololu()}}
+{\footnotesize\ttfamily Pololu\+::\+Pololu (\begin{DoxyParamCaption}\item[{const char $\ast$}]{port\+Name,  }\item[{unsigned short}]{baud\+Rate }\end{DoxyParamCaption})}
+
+
+
+Constructor tries to open serial communication port having specified port name and baud rate. If the communication channel cannot be opened then a exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & const char$\ast$. Name of the communication port. \\
+\hline
+{\em baud\+Rate} & unsigned short. Baud rate parameter of serial communication port. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPololu_a20893d84c4fdc562cbb83a18785e7c4a}\label{classPololu_a20893d84c4fdc562cbb83a18785e7c4a}} 
+\index{Pololu@{Pololu}!closeConnection@{closeConnection}}
+\index{closeConnection@{closeConnection}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{closeConnection()}{closeConnection()}}
+{\footnotesize\ttfamily void Pololu\+::close\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes the serial connection. 
+
+If an error occurs an exception is thrown. \mbox{\Hypertarget{classPololu_ae365c943d44a08ce45fccafa4f91781a}\label{classPololu_ae365c943d44a08ce45fccafa4f91781a}} 
+\index{Pololu@{Pololu}!getErrors@{getErrors}}
+\index{getErrors@{getErrors}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{getErrors()}{getErrors()}}
+{\footnotesize\ttfamily unsigned short Pololu\+::get\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reads and returns all currently detected error codes. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. Errors codes represented as bit-\/codes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIPololu_a2bc587239b23b1d6a9800eaef1937120}{IPololu}}.
+
+\mbox{\Hypertarget{classPololu_a508ff1ad49e25731a80048197568723b}\label{classPololu_a508ff1ad49e25731a80048197568723b}} 
+\index{Pololu@{Pololu}!getMovingState@{getMovingState}}
+\index{getMovingState@{getMovingState}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{getMovingState()}{getMovingState()}}
+{\footnotesize\ttfamily bool Pololu\+::get\+Moving\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the moving state of all motors the control board is connected with. If an error occurs an exception is thrown. 
+
+\begin{DoxyReturn}{Returns}
+bool. Return value is false if all motors don\textquotesingle{}t move anymore, otherwise return value is true. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIPololu_a759bccbf6bce4c62c4d6c4a92d072803}{IPololu}}.
+
+\mbox{\Hypertarget{classPololu_a51a9914e19918b4c43c9ec58da59147c}\label{classPololu_a51a9914e19918b4c43c9ec58da59147c}} 
+\index{Pololu@{Pololu}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily unsigned short Pololu\+::get\+Position (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Delivers the position value the specified motor is target at. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & short traget\+Pos. Target position to be reached.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIPololu_a909a142f3bc63a90c886fca6c46c0c22}{IPololu}}.
+
+\mbox{\Hypertarget{classPololu_a9df8efb22b92bbff7b01dd539930c207}\label{classPololu_a9df8efb22b92bbff7b01dd539930c207}} 
+\index{Pololu@{Pololu}!initConnection@{initConnection}}
+\index{initConnection@{initConnection}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{initConnection()}{initConnection()}}
+{\footnotesize\ttfamily void Pololu\+::init\+Connection (\begin{DoxyParamCaption}\item[{const char $\ast$}]{port\+Name,  }\item[{unsigned short}]{baud\+Rate }\end{DoxyParamCaption})}
+
+
+
+Used to change the connection data. If the communication channel is open then the channel is closed first. The new connection parameters are set, but the channel will not be opened. To open the channel the method open\+Connection has to be called first. 
+
+If an error occurs an exception is thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & const char$\ast$. Name of the communication port. \\
+\hline
+{\em baud\+Rate} & unsigned short. Baud rate parameter of serial communication port. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPololu_ad002d2eada218f15cdf72b3428097cb2}\label{classPololu_ad002d2eada218f15cdf72b3428097cb2}} 
+\index{Pololu@{Pololu}!openConnection@{openConnection}}
+\index{openConnection@{openConnection}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{openConnection()}{openConnection()}}
+{\footnotesize\ttfamily void Pololu\+::open\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Opens the serial connection with the currently specified parameter (see method init\+Connection(...)). 
+
+If an error occurs an exception is thrown. \mbox{\Hypertarget{classPololu_af7993f6d66786503c017682730a0e3dd}\label{classPololu_af7993f6d66786503c017682730a0e3dd}} 
+\index{Pololu@{Pololu}!setAcceleration@{setAcceleration}}
+\index{setAcceleration@{setAcceleration}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{setAcceleration()}{setAcceleration()}}
+{\footnotesize\ttfamily bool Pololu\+::set\+Acceleration (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{max\+Accel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets the maximal acceleration of the specified servo motor. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & max\+Accel. Maximal acceleration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIPololu_a439f7d5f572c808fcd0ac7cd35651a3f}{IPololu}}.
+
+\mbox{\Hypertarget{classPololu_a1f24fec8da27e5e0e40fb24b88e70858}\label{classPololu_a1f24fec8da27e5e0e40fb24b88e70858}} 
+\index{Pololu@{Pololu}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily unsigned short Pololu\+::set\+Position (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{traget\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Moves motor to the specified position. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & short traget\+Pos. Target position to be reached.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIPololu_a32999596c444ebb2d36f270f485adf66}{IPololu}}.
+
+\mbox{\Hypertarget{classPololu_aa990539f5c36628ea0dde3b5c0618128}\label{classPololu_aa990539f5c36628ea0dde3b5c0618128}} 
+\index{Pololu@{Pololu}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!Pololu@{Pololu}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily bool Pololu\+::set\+Speed (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{max\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets the maximal speed of the specified servo motor. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & max\+Speed. Maximal speed value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIPololu_a9012cab335e7e99147d43c1773019a50}{IPololu}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pololu.\+hpp\item 
+Pololu.\+cpp\end{DoxyCompactItemize}

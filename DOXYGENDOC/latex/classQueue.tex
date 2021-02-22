@@ -1,0 +1,139 @@
+\hypertarget{classQueue}{}\doxysection{Queue$<$ T $>$ Class Template Reference}
+\label{classQueue}\index{Queue$<$ T $>$@{Queue$<$ T $>$}}
+
+
+A template class definition. The class implements a queue-\/container.  
+
+
+
+
+{\ttfamily \#include $<$Simpl\+Unit\+Test\+FW.\+hpp$>$}
+
+
+
+Inheritance diagram for Queue$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Queue$<$ T $>$\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classQueue_a235d751ba857891560ee15bed6b5ee3c}{enqueue}} (T value)
+\begin{DoxyCompactList}\small\item\em Adds a new element to the queue. The new element has the given value. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classQueue_a036f122e9bf968c80ccd73b9d38017c0}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Removes one element from the queue. The value of the removed queue element is returned. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classQueue_a62b36398e72d7b59b559262143aa4a04}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Returns the value of the queue element to be removed next when calling method \mbox{\hyperlink{classQueue_a036f122e9bf968c80ccd73b9d38017c0}{dequeue()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a4d1b288024e0881880b2e915bc5498bf}{print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the content of the queue on the standard output. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classQueue_a515bd72c9d7d2bc12add78c0d2e79762}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Tests whether or not the queue is empty. It return true if the queue is empty otherwise false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Queue$<$ T $>$}
+
+A template class definition. The class implements a queue-\/container. 
+
+@param T Type 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classQueue_a036f122e9bf968c80ccd73b9d38017c0}\label{classQueue_a036f122e9bf968c80ccd73b9d38017c0}} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes one element from the queue. The value of the removed queue element is returned. 
+
+\begin{DoxyReturn}{Returns}
+T value of the queue element removed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & \char`\"{}list is empty\char`\"{} if queue is empty \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classQueue_a235d751ba857891560ee15bed6b5ee3c}\label{classQueue_a235d751ba857891560ee15bed6b5ee3c}} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new element to the queue. The new element has the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of the new queue element. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQueue_a515bd72c9d7d2bc12add78c0d2e79762}\label{classQueue_a515bd72c9d7d2bc12add78c0d2e79762}} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Tests whether or not the queue is empty. It return true if the queue is empty otherwise false. 
+
+\begin{DoxyReturn}{Returns}
+bool true if queue is empty otherwise false. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classList_a080d579feca1feaf5f4bd566a85707d2}{List$<$ T $>$}}.
+
+\mbox{\Hypertarget{classQueue_a62b36398e72d7b59b559262143aa4a04}\label{classQueue_a62b36398e72d7b59b559262143aa4a04}} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the value of the queue element to be removed next when calling method \mbox{\hyperlink{classQueue_a036f122e9bf968c80ccd73b9d38017c0}{dequeue()}}. 
+
+\begin{DoxyReturn}{Returns}
+T value of the element the be removed next when calling method \mbox{\hyperlink{classQueue_a036f122e9bf968c80ccd73b9d38017c0}{dequeue()}}.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & \char`\"{}list is empty\char`\"{} if queue is empty \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classQueue_a4d1b288024e0881880b2e915bc5498bf}\label{classQueue_a4d1b288024e0881880b2e915bc5498bf}} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!print@{print}}
+\index{print@{print}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints the content of the queue on the standard output. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classList_af3093615c83b678b62d6776701b2a7cc}{List$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simpl\+Unit\+Test\+FW.\+hpp\end{DoxyCompactItemize}

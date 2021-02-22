@@ -1,0 +1,110 @@
+\hypertarget{classTestItem}{}\doxysection{Test\+Item Class Reference}
+\label{classTestItem}\index{TestItem@{TestItem}}
+
+
+Implementation of the core functions for all derived classes of the unit test framework.  
+
+
+
+
+{\ttfamily \#include $<$Simpl\+Unit\+Test\+FW.\+hpp$>$}
+
+
+
+Inheritance diagram for Test\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for Test\+Item\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTestItem_a7e62ca58fcf848aa636a1600649e06c6}{Test\+Item}} (string s=string(\char`\"{}undefined test item\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTestItem_aaeac6ad1261f506b925c857ae6da8df0}\label{classTestItem_aaeac6ad1261f506b925c857ae6da8df0}} 
+virtual string \mbox{\hyperlink{classTestItem_aaeac6ad1261f506b925c857ae6da8df0}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the single test. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTestItem_a5f5cf2ccdc436f1ead07159db980bf1a}{get\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Returns the outcome of the test. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTestItem_ae9ace1f62ec1da3056a0d411fb9d5847}{add\+Test\+Item}} (\mbox{\hyperlink{classITestItem}{ITest\+Item}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Adds a test to the set of tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTestItem_ab9a4bd873aa4c63371bbeee3f49932de}\label{classTestItem_ab9a4bd873aa4c63371bbeee3f49932de}} 
+string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classTestItem_a0dbe2062efb25b8df840a725b7255b14}\label{classTestItem_a0dbe2062efb25b8df840a725b7255b14}} 
+bool {\bfseries result\+\_\+} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the core functions for all derived classes of the unit test framework. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTestItem_a7e62ca58fcf848aa636a1600649e06c6}\label{classTestItem_a7e62ca58fcf848aa636a1600649e06c6}} 
+\index{TestItem@{TestItem}!TestItem@{TestItem}}
+\index{TestItem@{TestItem}!TestItem@{TestItem}}
+\doxysubsubsection{\texorpdfstring{TestItem()}{TestItem()}}
+{\footnotesize\ttfamily Test\+Item\+::\+Test\+Item (\begin{DoxyParamCaption}\item[{string}]{s = {\ttfamily string(\char`\"{}undefined~test~item\char`\"{})} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & string contains the name of the test item. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTestItem_ae9ace1f62ec1da3056a0d411fb9d5847}\label{classTestItem_ae9ace1f62ec1da3056a0d411fb9d5847}} 
+\index{TestItem@{TestItem}!addTestItem@{addTestItem}}
+\index{addTestItem@{addTestItem}!TestItem@{TestItem}}
+\doxysubsubsection{\texorpdfstring{addTestItem()}{addTestItem()}}
+{\footnotesize\ttfamily virtual void Test\+Item\+::add\+Test\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classITestItem}{ITest\+Item}} $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds a test to the set of tests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & $\ast$\+ITest\+Item pointer to a test item.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$const} & char if test cannot be added. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classITestItem_a6d113b7eb2cc2be78bf28e959dac3889}{ITest\+Item}}.
+
+\mbox{\Hypertarget{classTestItem_a5f5cf2ccdc436f1ead07159db980bf1a}\label{classTestItem_a5f5cf2ccdc436f1ead07159db980bf1a}} 
+\index{TestItem@{TestItem}!getResult@{getResult}}
+\index{getResult@{getResult}!TestItem@{TestItem}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily virtual bool Test\+Item\+::get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the outcome of the test. 
+
+\begin{DoxyReturn}{Returns}
+bool Return value is true, if and only if, test has delivered the expected results. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classITestItem_afea07566ee2d02c3ff0d6afdba70459f}{ITest\+Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simpl\+Unit\+Test\+FW.\+hpp\end{DoxyCompactItemize}

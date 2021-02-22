@@ -1,0 +1,161 @@
+\hypertarget{classList}{}\doxysection{List$<$ T $>$ Class Template Reference}
+\label{classList}\index{List$<$ T $>$@{List$<$ T $>$}}
+
+
+A template class definition. The class contains the start and end element of the list. It implements a doubly linked list.  
+
+
+
+
+{\ttfamily \#include $<$Simpl\+Unit\+Test\+FW.\+hpp$>$}
+
+
+
+Inheritance diagram for List$<$ T $>$\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classList_a7213c873c8b4e8ddb80228213afde6af}{prepend}} (T value)
+\begin{DoxyCompactList}\small\item\em Adds a new list element before the current start element of the list. The new list element contains the given value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classList_aae0e1658089e55f1f7326c60c3a4a664}{append}} (T value)
+\begin{DoxyCompactList}\small\item\em Adds a new list element after the current end element of the list. The new list element contains the given value. \end{DoxyCompactList}\item 
+virtual T \mbox{\hyperlink{classList_a33bd635f46a7483dbdd372ce7de712df}{remove\+First}} ()
+\begin{DoxyCompactList}\small\item\em Removes the start element of the list and returns the value of the element removed. \end{DoxyCompactList}\item 
+virtual T \mbox{\hyperlink{classList_a4f83a7454589ad642de7e4d7bfe5df92}{remove\+Last}} ()
+\begin{DoxyCompactList}\small\item\em Removes the end element of the list and returns the value of the element removed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classList_a080d579feca1feaf5f4bd566a85707d2}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Tests whether or not the list is empty. It return true if the list is empty otherwise false. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classList_af3093615c83b678b62d6776701b2a7cc}{print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the content of the list on the standard output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classList_aa73ed9c7b9daef61313939fda0386220}\label{classList_aa73ed9c7b9daef61313939fda0386220}} 
+\mbox{\hyperlink{classElement}{Element}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classList_aa73ed9c7b9daef61313939fda0386220}{ptr\+Start\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em Start element of the list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a28d2074139ddf81301b2ccd1998e037f}\label{classList_a28d2074139ddf81301b2ccd1998e037f}} 
+\mbox{\hyperlink{classElement}{Element}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classList_a28d2074139ddf81301b2ccd1998e037f}{ptr\+End\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em End element of the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class List$<$ T $>$}
+
+A template class definition. The class contains the start and end element of the list. It implements a doubly linked list. 
+
+@param T Type 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classList_aae0e1658089e55f1f7326c60c3a4a664}\label{classList_aae0e1658089e55f1f7326c60c3a4a664}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!append@{append}}
+\index{append@{append}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::append (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds a new list element after the current end element of the list. The new list element contains the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of the new list element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList_a080d579feca1feaf5f4bd566a85707d2}\label{classList_a080d579feca1feaf5f4bd566a85707d2}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Tests whether or not the list is empty. It return true if the list is empty otherwise false. 
+
+\begin{DoxyReturn}{Returns}
+bool true if list is empty otherwise false. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classQueue_a515bd72c9d7d2bc12add78c0d2e79762}{Queue$<$ T $>$}}, and \mbox{\hyperlink{classQueue_a515bd72c9d7d2bc12add78c0d2e79762}{Queue$<$ Test\+Item $\ast$ $>$}}.
+
+\mbox{\Hypertarget{classList_a7213c873c8b4e8ddb80228213afde6af}\label{classList_a7213c873c8b4e8ddb80228213afde6af}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!prepend@{prepend}}
+\index{prepend@{prepend}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{prepend()}{prepend()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::prepend (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds a new list element before the current start element of the list. The new list element contains the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of the new list element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList_af3093615c83b678b62d6776701b2a7cc}\label{classList_af3093615c83b678b62d6776701b2a7cc}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!print@{print}}
+\index{print@{print}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints the content of the list on the standard output. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classQueue_a4d1b288024e0881880b2e915bc5498bf}{Queue$<$ T $>$}}, and \mbox{\hyperlink{classQueue_a4d1b288024e0881880b2e915bc5498bf}{Queue$<$ Test\+Item $\ast$ $>$}}.
+
+\mbox{\Hypertarget{classList_a33bd635f46a7483dbdd372ce7de712df}\label{classList_a33bd635f46a7483dbdd372ce7de712df}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!removeFirst@{removeFirst}}
+\index{removeFirst@{removeFirst}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeFirst()}{removeFirst()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual T \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::remove\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Removes the start element of the list and returns the value of the element removed. 
+
+\begin{DoxyReturn}{Returns}
+T value of the list element removed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & \char`\"{}list is empty\char`\"{} if list is empty \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classList_a4f83a7454589ad642de7e4d7bfe5df92}\label{classList_a4f83a7454589ad642de7e4d7bfe5df92}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!removeLast@{removeLast}}
+\index{removeLast@{removeLast}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeLast()}{removeLast()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual T \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::remove\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Removes the end element of the list and returns the value of the element removed. 
+
+\begin{DoxyReturn}{Returns}
+T value of the list element removed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & \char`\"{}list is empty\char`\"{} if list is empty \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simpl\+Unit\+Test\+FW.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+digraph "ServoMotor"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ServoMotor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ServoMotorPololuBaseAdv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classServoMotorPololuBaseAdv.html",tooltip="Implements the interface IServoMotoBaseAdv derived from class ServoMotorPololuBase."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ServoMotorPololuBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classServoMotorPololuBase.html",tooltip="Class implements the interface IServoMotorBase based on the pololu controller board (https://www...."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="IServoMotorBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIServoMotorBase.html",tooltip="Interface class that specifies the basic functionality of object that initializes and controls a serv..."];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="IServoMotoBaseAdv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIServoMotoBaseAdv.html",tooltip="Interface class that specifies additional functionality with respect to set maximal speed and acceler..."];
+  Node6 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="IServoMotor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIServoMotor.html",tooltip="Interface to control a servo motor. The interface provides the basic functions for the control for a ..."];
+}

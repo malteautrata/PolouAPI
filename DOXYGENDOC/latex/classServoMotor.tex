@@ -1,0 +1,162 @@
+\hypertarget{classServoMotor}{}\doxysection{Servo\+Motor Class Reference}
+\label{classServoMotor}\index{ServoMotor@{ServoMotor}}
+
+
+Inheritance diagram for Servo\+Motor\+:
+% FIG 0
+
+
+Collaboration diagram for Servo\+Motor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServoMotor_a4e889e55bd5112297b33c9e7a640a246}{Servo\+Motor}} (unsigned short servo\+ID, unsigned short neutral\+Pos, unsigned short delta, \mbox{\hyperlink{classIPololu}{IPololu}} $\ast$pololu\+Controller)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. In case of an error an exception is thrown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoMotor_a174835c6ce811360a7c48b74967f9a57}{set\+Min\+Max\+Degree}} (short min\+Degree, short max\+Degree)
+\begin{DoxyCompactList}\small\item\em Maps the given minimal degree value to the minimal position value and the given maximal degree value to the maximal position value. Per default the maximal position value is defined as 180 degree, while the minimal position is defined as 0 degree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoMotor_a8437e74ff7f6e0a2c912e26be9dfa6da}{set\+Min\+Max\+Radian}} (float min\+Radian, float max\+Radian)
+\begin{DoxyCompactList}\small\item\em Maps the given minimal degree value to the minimal position value and the given maximal degree value to the maximal position value. Per default the maximal position value is defined as 2$\ast$\+PI rad, while the minimal position is defined as 0 rad. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{classServoMotor_a5b016d874b4ed38fe06a4dd5dd3342fd}{set\+Position\+In\+Deg}} (short new\+Position)
+\begin{DoxyCompactList}\small\item\em Moves the servo motor to the given position. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classServoMotor_aff841d562491cb6c347a0c148ffa0c6b}{set\+Position\+In\+Rad}} (float new\+Position)
+\begin{DoxyCompactList}\small\item\em Moves the servo motor to the given position. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{classServoMotor_af059dccc8bcf6685324544c73a87980b}{get\+Position\+In\+Deg}} ()
+\begin{DoxyCompactList}\small\item\em Delivers the position value (in degree) the servo trageted at. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classServoMotor_ad383a378c2993718d4528fd89087c155}{get\+Position\+In\+Rad}} ()
+\begin{DoxyCompactList}\small\item\em Delivers the position value (in radian) the servo trageted at. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServoMotor_adbfc70ed92cf5654f12cb9b245794bae}\label{classServoMotor_adbfc70ed92cf5654f12cb9b245794bae}} 
+void \mbox{\hyperlink{classServoMotor_adbfc70ed92cf5654f12cb9b245794bae}{show\+Pololu\+Values}} (unsigned short \&min, unsigned short \&mid, unsigned short \&max)
+\begin{DoxyCompactList}\small\item\em Shows which settings have to be made in the \mbox{\hyperlink{classPololu}{Pololu}} Maestro Control Center for the servo, based on the starting position and the delta for the specific servo. See \mbox{\hyperlink{classPololu}{Pololu}} manual for further explainations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classServoMotor_a4e889e55bd5112297b33c9e7a640a246}\label{classServoMotor_a4e889e55bd5112297b33c9e7a640a246}} 
+\index{ServoMotor@{ServoMotor}!ServoMotor@{ServoMotor}}
+\index{ServoMotor@{ServoMotor}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{ServoMotor()}{ServoMotor()}}
+{\footnotesize\ttfamily Servo\+Motor\+::\+Servo\+Motor (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{neutral\+Pos,  }\item[{unsigned short}]{delta,  }\item[{\mbox{\hyperlink{classIPololu}{IPololu}} $\ast$}]{pololu\+Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. In case of an error an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+ID} & unsigned short. Index ($>$= 0) of the servo motor that identifies which slot / pin on the micro controller board the servo is connected with.\\
+\hline
+{\em neutral\+Pos} & unsigned short. (neutral\+Pos $>$ 0) Neutral position of the servo, usually defined by an impulse of 1\textquotesingle{}500 micro seconds impulse length. The position value is usually given by impulse length per one micro seconds. Using the pololu micro-\/controller to control the servor motor the impulse length is given per units of 1/4 of a quarter of the micro-\/second. Therefore, position here is defined impulse length per one micro second per 1/4 micro second. Thus, position value = impulse lengths $\ast$ 4 (units). See \mbox{\hyperlink{classPololu}{Pololu}} manual for further explanations.\\
+\hline
+{\em delta} & unsigned short. (delta $<$ neutral\+Pos) Defines the range of positions values, starting from the neutral positions +/-\/ delta.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}\param *pololuController. Pointer to a pololu instance that controls the servo motors.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classServoMotor_af059dccc8bcf6685324544c73a87980b}\label{classServoMotor_af059dccc8bcf6685324544c73a87980b}} 
+\index{ServoMotor@{ServoMotor}!getPositionInDeg@{getPositionInDeg}}
+\index{getPositionInDeg@{getPositionInDeg}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{getPositionInDeg()}{getPositionInDeg()}}
+{\footnotesize\ttfamily short Servo\+Motor\+::get\+Position\+In\+Deg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delivers the position value (in degree) the servo trageted at. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotor_a6ae12d71e04f5c6e5e4561220b754501}{IServo\+Motor}}.
+
+\mbox{\Hypertarget{classServoMotor_ad383a378c2993718d4528fd89087c155}\label{classServoMotor_ad383a378c2993718d4528fd89087c155}} 
+\index{ServoMotor@{ServoMotor}!getPositionInRad@{getPositionInRad}}
+\index{getPositionInRad@{getPositionInRad}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{getPositionInRad()}{getPositionInRad()}}
+{\footnotesize\ttfamily float Servo\+Motor\+::get\+Position\+In\+Rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delivers the position value (in radian) the servo trageted at. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotor_ab7e5752ab536a157ed3236315bfb5fbb}{IServo\+Motor}}.
+
+\mbox{\Hypertarget{classServoMotor_a174835c6ce811360a7c48b74967f9a57}\label{classServoMotor_a174835c6ce811360a7c48b74967f9a57}} 
+\index{ServoMotor@{ServoMotor}!setMinMaxDegree@{setMinMaxDegree}}
+\index{setMinMaxDegree@{setMinMaxDegree}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{setMinMaxDegree()}{setMinMaxDegree()}}
+{\footnotesize\ttfamily void Servo\+Motor\+::set\+Min\+Max\+Degree (\begin{DoxyParamCaption}\item[{short}]{min\+Degree,  }\item[{short}]{max\+Degree }\end{DoxyParamCaption})}
+
+
+
+Maps the given minimal degree value to the minimal position value and the given maximal degree value to the maximal position value. Per default the maximal position value is defined as 180 degree, while the minimal position is defined as 0 degree. 
+
+Note this method call overwrites values set by method set\+Min\+Max\+Radian and vice versa. \mbox{\Hypertarget{classServoMotor_a8437e74ff7f6e0a2c912e26be9dfa6da}\label{classServoMotor_a8437e74ff7f6e0a2c912e26be9dfa6da}} 
+\index{ServoMotor@{ServoMotor}!setMinMaxRadian@{setMinMaxRadian}}
+\index{setMinMaxRadian@{setMinMaxRadian}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{setMinMaxRadian()}{setMinMaxRadian()}}
+{\footnotesize\ttfamily void Servo\+Motor\+::set\+Min\+Max\+Radian (\begin{DoxyParamCaption}\item[{float}]{min\+Radian,  }\item[{float}]{max\+Radian }\end{DoxyParamCaption})}
+
+
+
+Maps the given minimal degree value to the minimal position value and the given maximal degree value to the maximal position value. Per default the maximal position value is defined as 2$\ast$\+PI rad, while the minimal position is defined as 0 rad. 
+
+Note this method call overwrites values set by method set\+Min\+Max\+Radian and vice versa. \mbox{\Hypertarget{classServoMotor_a5b016d874b4ed38fe06a4dd5dd3342fd}\label{classServoMotor_a5b016d874b4ed38fe06a4dd5dd3342fd}} 
+\index{ServoMotor@{ServoMotor}!setPositionInDeg@{setPositionInDeg}}
+\index{setPositionInDeg@{setPositionInDeg}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{setPositionInDeg()}{setPositionInDeg()}}
+{\footnotesize\ttfamily short Servo\+Motor\+::set\+Position\+In\+Deg (\begin{DoxyParamCaption}\item[{short}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the servo motor to the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & unsigned short position value given in degree.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual position set in degree. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotor_aef7f6a5804011ba2664866fade36db69}{IServo\+Motor}}.
+
+\mbox{\Hypertarget{classServoMotor_aff841d562491cb6c347a0c148ffa0c6b}\label{classServoMotor_aff841d562491cb6c347a0c148ffa0c6b}} 
+\index{ServoMotor@{ServoMotor}!setPositionInRad@{setPositionInRad}}
+\index{setPositionInRad@{setPositionInRad}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{setPositionInRad()}{setPositionInRad()}}
+{\footnotesize\ttfamily float Servo\+Motor\+::set\+Position\+In\+Rad (\begin{DoxyParamCaption}\item[{float}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the servo motor to the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & unsigned short position value given in radian.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual position set in radian 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotor_a9bd9bef64c7f9f4d52b063115043cda0}{IServo\+Motor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Servo\+Motor.\+hpp\item 
+Servo\+Motor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,150 @@
+\hypertarget{classIServoMotorBase}{}\doxysection{IServo\+Motor\+Base Class Reference}
+\label{classIServoMotorBase}\index{IServoMotorBase@{IServoMotorBase}}
+
+
+Interface class that specifies the basic functionality of object that initializes and controls a servo motor.  
+
+
+
+
+{\ttfamily \#include $<$Servo\+Motor.\+hpp$>$}
+
+
+
+Inheritance diagram for IServo\+Motor\+Base\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotorBase_ad1f8ddf05981ea5ae282b4647d209f70}{get\+Servo\+Number}} ()=0
+\begin{DoxyCompactList}\small\item\em Delivers the ID of the servo motor instance. This ID might related to certain connectors of the board / HW used to control the servo motor. This must be specified in the actual implementation of this inteface by the derived classes. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotorBase_afd68bee685b231b135de34596cf29157}{get\+Min\+Pos\+In\+Abs}} ()=0
+\begin{DoxyCompactList}\small\item\em Delivers the minimal position value the servo motor can / shall move to. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotorBase_a0b5325efc343b497c78d8681df8e3f9a}{get\+Mid\+Pos\+In\+Abs}} ()=0
+\begin{DoxyCompactList}\small\item\em Delivers the position value in units for the so called neutral position of a servo motor given in units. This position might specifically defined by the developer for specific servo motors. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotorBase_a54e60e6ce8aeaf57297a8f4ecfb88c1f}{get\+Max\+Pos\+In\+Abs}} ()=0
+\begin{DoxyCompactList}\small\item\em Delivers the maximal position value the servo motor can / shall move to. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotorBase_a97cd1849a661c4dcf8aac791de0a6d59}{set\+Position\+In\+Abs}} (unsigned short new\+Position)=0
+\begin{DoxyCompactList}\small\item\em Moves the servo motor to the given position. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIServoMotorBase_ac13b41148677835c59465b2c142a2ad4}{get\+Position\+In\+Abs}} ()=0
+\begin{DoxyCompactList}\small\item\em Delivers the position value (in units) the servo trageted at. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface class that specifies the basic functionality of object that initializes and controls a servo motor. 
+
+The positions of the servo motor are defined by positions values (given in units). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIServoMotorBase_a54e60e6ce8aeaf57297a8f4ecfb88c1f}\label{classIServoMotorBase_a54e60e6ce8aeaf57297a8f4ecfb88c1f}} 
+\index{IServoMotorBase@{IServoMotorBase}!getMaxPosInAbs@{getMaxPosInAbs}}
+\index{getMaxPosInAbs@{getMaxPosInAbs}!IServoMotorBase@{IServoMotorBase}}
+\doxysubsubsection{\texorpdfstring{getMaxPosInAbs()}{getMaxPosInAbs()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Motor\+Base\+::get\+Max\+Pos\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the maximal position value the servo motor can / shall move to. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBase_a922ad1f34f5f658a3b5852664e58dce5}{Servo\+Motor\+Pololu\+Base}}.
+
+\mbox{\Hypertarget{classIServoMotorBase_a0b5325efc343b497c78d8681df8e3f9a}\label{classIServoMotorBase_a0b5325efc343b497c78d8681df8e3f9a}} 
+\index{IServoMotorBase@{IServoMotorBase}!getMidPosInAbs@{getMidPosInAbs}}
+\index{getMidPosInAbs@{getMidPosInAbs}!IServoMotorBase@{IServoMotorBase}}
+\doxysubsubsection{\texorpdfstring{getMidPosInAbs()}{getMidPosInAbs()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Motor\+Base\+::get\+Mid\+Pos\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the position value in units for the so called neutral position of a servo motor given in units. This position might specifically defined by the developer for specific servo motors. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBase_a94b79ecee512152fe886742e90a45b20}{Servo\+Motor\+Pololu\+Base}}.
+
+\mbox{\Hypertarget{classIServoMotorBase_afd68bee685b231b135de34596cf29157}\label{classIServoMotorBase_afd68bee685b231b135de34596cf29157}} 
+\index{IServoMotorBase@{IServoMotorBase}!getMinPosInAbs@{getMinPosInAbs}}
+\index{getMinPosInAbs@{getMinPosInAbs}!IServoMotorBase@{IServoMotorBase}}
+\doxysubsubsection{\texorpdfstring{getMinPosInAbs()}{getMinPosInAbs()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Motor\+Base\+::get\+Min\+Pos\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the minimal position value the servo motor can / shall move to. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBase_a97f0632cea849ccf8e0295dd33b64143}{Servo\+Motor\+Pololu\+Base}}.
+
+\mbox{\Hypertarget{classIServoMotorBase_ac13b41148677835c59465b2c142a2ad4}\label{classIServoMotorBase_ac13b41148677835c59465b2c142a2ad4}} 
+\index{IServoMotorBase@{IServoMotorBase}!getPositionInAbs@{getPositionInAbs}}
+\index{getPositionInAbs@{getPositionInAbs}!IServoMotorBase@{IServoMotorBase}}
+\doxysubsubsection{\texorpdfstring{getPositionInAbs()}{getPositionInAbs()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Motor\+Base\+::get\+Position\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the position value (in units) the servo trageted at. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBase_aa9f364c50b0291f53acd4c307a1cf25f}{Servo\+Motor\+Pololu\+Base}}.
+
+\mbox{\Hypertarget{classIServoMotorBase_ad1f8ddf05981ea5ae282b4647d209f70}\label{classIServoMotorBase_ad1f8ddf05981ea5ae282b4647d209f70}} 
+\index{IServoMotorBase@{IServoMotorBase}!getServoNumber@{getServoNumber}}
+\index{getServoNumber@{getServoNumber}!IServoMotorBase@{IServoMotorBase}}
+\doxysubsubsection{\texorpdfstring{getServoNumber()}{getServoNumber()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Motor\+Base\+::get\+Servo\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the ID of the servo motor instance. This ID might related to certain connectors of the board / HW used to control the servo motor. This must be specified in the actual implementation of this inteface by the derived classes. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int number of the connector of the servo motor on the board. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBase_a07f6185529860c8dcd7949cfa1eea988}{Servo\+Motor\+Pololu\+Base}}.
+
+\mbox{\Hypertarget{classIServoMotorBase_a97cd1849a661c4dcf8aac791de0a6d59}\label{classIServoMotorBase_a97cd1849a661c4dcf8aac791de0a6d59}} 
+\index{IServoMotorBase@{IServoMotorBase}!setPositionInAbs@{setPositionInAbs}}
+\index{setPositionInAbs@{setPositionInAbs}!IServoMotorBase@{IServoMotorBase}}
+\doxysubsubsection{\texorpdfstring{setPositionInAbs()}{setPositionInAbs()}}
+{\footnotesize\ttfamily virtual unsigned short IServo\+Motor\+Base\+::set\+Position\+In\+Abs (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Moves the servo motor to the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & unsigned short position value given in units.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual position set given in units. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classServoMotorPololuBase_a813192563036e493779e03b576f06c8f}{Servo\+Motor\+Pololu\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Servo\+Motor.\+hpp\end{DoxyCompactItemize}

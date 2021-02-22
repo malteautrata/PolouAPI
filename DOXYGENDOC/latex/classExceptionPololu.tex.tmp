@@ -1,0 +1,45 @@
+\hypertarget{classExceptionPololu}{}\doxysection{Exception\+Pololu Class Reference}
+\label{classExceptionPololu}\index{ExceptionPololu@{ExceptionPololu}}
+
+
+Inheritance diagram for Exception\+Pololu\+:
+% FIG 0
+
+
+Collaboration diagram for Exception\+Pololu\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExceptionPololu_ac747d14aadf78b7a21e43afef0ddddf3}\label{classExceptionPololu_ac747d14aadf78b7a21e43afef0ddddf3}} 
+{\bfseries Exception\+Pololu} (string msg)
+\item 
+string \mbox{\hyperlink{classExceptionPololu_a0c0db09f02e3c9f0ebfc46938f71ee99}{get\+Msg}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExceptionPololu_ade0b404553a0022746de6dacfce71054}\label{classExceptionPololu_ade0b404553a0022746de6dacfce71054}} 
+string {\bfseries msg\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classExceptionPololu_a0c0db09f02e3c9f0ebfc46938f71ee99}\label{classExceptionPololu_a0c0db09f02e3c9f0ebfc46938f71ee99}} 
+\index{ExceptionPololu@{ExceptionPololu}!getMsg@{getMsg}}
+\index{getMsg@{getMsg}!ExceptionPololu@{ExceptionPololu}}
+\doxysubsubsection{\texorpdfstring{getMsg()}{getMsg()}}
+{\footnotesize\ttfamily string Exception\+Pololu\+::get\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+string error messages 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIException_a41d25da6a3bafe606951879e85e793a0}{IException}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Pololu.\+hpp\end{DoxyCompactItemize}

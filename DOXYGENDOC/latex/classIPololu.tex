@@ -1,0 +1,186 @@
+\hypertarget{classIPololu}{}\doxysection{IPololu Class Reference}
+\label{classIPololu}\index{IPololu@{IPololu}}
+
+
+Interface to control a \mbox{\hyperlink{classPololu}{Pololu}} controller. The interface provides the basic functions for the control of servo motors.  
+
+
+
+
+{\ttfamily \#include $<$Pololu.\+hpp$>$}
+
+
+
+Inheritance diagram for IPololu\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual unsigned short \mbox{\hyperlink{classIPololu_a32999596c444ebb2d36f270f485adf66}{set\+Position}} (unsigned short servo\+ID, unsigned short traget\+Pos)=0
+\begin{DoxyCompactList}\small\item\em Moves motor to the specified position. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIPololu_a9012cab335e7e99147d43c1773019a50}{set\+Speed}} (unsigned short servo\+ID, unsigned short max\+Speed)=0
+\begin{DoxyCompactList}\small\item\em Sets the maximal speed of the specified servo motor. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIPololu_a439f7d5f572c808fcd0ac7cd35651a3f}{set\+Acceleration}} (unsigned short servo\+ID, unsigned short max\+Accel)=0
+\begin{DoxyCompactList}\small\item\em Sets the maximal acceleration of the specified servo motor. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIPololu_a909a142f3bc63a90c886fca6c46c0c22}{get\+Position}} (unsigned short servo\+ID)=0
+\begin{DoxyCompactList}\small\item\em Delivers the position value the specified motor is target at. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIPololu_a759bccbf6bce4c62c4d6c4a92d072803}{get\+Moving\+State}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the moving state of all motors the control board is connected with. If an error occurs an exception is thrown. \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classIPololu_a2bc587239b23b1d6a9800eaef1937120}{get\+Errors}} ()=0
+\begin{DoxyCompactList}\small\item\em Reads and returns all currently detected error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIPololu_a77dc4790fe601a910d307dedc9abbe26}\label{classIPololu_a77dc4790fe601a910d307dedc9abbe26}} 
+class {\bfseries Servo\+Motor}
+\item 
+\mbox{\Hypertarget{classIPololu_abded949d5e79df7e6578097df11835e0}\label{classIPololu_abded949d5e79df7e6578097df11835e0}} 
+class {\bfseries Servo\+Motor\+Pololu\+Base}
+\item 
+\mbox{\Hypertarget{classIPololu_a579aaf793c5c2b0572d2a7db97ed4b54}\label{classIPololu_a579aaf793c5c2b0572d2a7db97ed4b54}} 
+class {\bfseries Servo\+Motor\+Pololu\+Base\+Adv}
+\item 
+\mbox{\Hypertarget{classIPololu_a9e04c6c43a3a691f1a19764f7e84d9c7}\label{classIPololu_a9e04c6c43a3a691f1a19764f7e84d9c7}} 
+class {\bfseries Servo\+Motor\+Pololu}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to control a \mbox{\hyperlink{classPololu}{Pololu}} controller. The interface provides the basic functions for the control of servo motors. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIPololu_a2bc587239b23b1d6a9800eaef1937120}\label{classIPololu_a2bc587239b23b1d6a9800eaef1937120}} 
+\index{IPololu@{IPololu}!getErrors@{getErrors}}
+\index{getErrors@{getErrors}!IPololu@{IPololu}}
+\doxysubsubsection{\texorpdfstring{getErrors()}{getErrors()}}
+{\footnotesize\ttfamily virtual unsigned short IPololu\+::get\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reads and returns all currently detected error codes. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. Errors codes represented as bit-\/codes. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPololu_ae365c943d44a08ce45fccafa4f91781a}{Pololu}}.
+
+\mbox{\Hypertarget{classIPololu_a759bccbf6bce4c62c4d6c4a92d072803}\label{classIPololu_a759bccbf6bce4c62c4d6c4a92d072803}} 
+\index{IPololu@{IPololu}!getMovingState@{getMovingState}}
+\index{getMovingState@{getMovingState}!IPololu@{IPololu}}
+\doxysubsubsection{\texorpdfstring{getMovingState()}{getMovingState()}}
+{\footnotesize\ttfamily virtual bool IPololu\+::get\+Moving\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the moving state of all motors the control board is connected with. If an error occurs an exception is thrown. 
+
+\begin{DoxyReturn}{Returns}
+bool. Return value is false if all motors don\textquotesingle{}t move anymore, otherwise return value is true. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPololu_a508ff1ad49e25731a80048197568723b}{Pololu}}.
+
+\mbox{\Hypertarget{classIPololu_a909a142f3bc63a90c886fca6c46c0c22}\label{classIPololu_a909a142f3bc63a90c886fca6c46c0c22}} 
+\index{IPololu@{IPololu}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!IPololu@{IPololu}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily virtual unsigned short IPololu\+::get\+Position (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delivers the position value the specified motor is target at. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & short traget\+Pos. Target position to be reached.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPololu_a51a9914e19918b4c43c9ec58da59147c}{Pololu}}.
+
+\mbox{\Hypertarget{classIPololu_a439f7d5f572c808fcd0ac7cd35651a3f}\label{classIPololu_a439f7d5f572c808fcd0ac7cd35651a3f}} 
+\index{IPololu@{IPololu}!setAcceleration@{setAcceleration}}
+\index{setAcceleration@{setAcceleration}!IPololu@{IPololu}}
+\doxysubsubsection{\texorpdfstring{setAcceleration()}{setAcceleration()}}
+{\footnotesize\ttfamily virtual bool IPololu\+::set\+Acceleration (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{max\+Accel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the maximal acceleration of the specified servo motor. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & max\+Accel. Maximal acceleration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPololu_af7993f6d66786503c017682730a0e3dd}{Pololu}}.
+
+\mbox{\Hypertarget{classIPololu_a32999596c444ebb2d36f270f485adf66}\label{classIPololu_a32999596c444ebb2d36f270f485adf66}} 
+\index{IPololu@{IPololu}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!IPololu@{IPololu}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily virtual unsigned short IPololu\+::set\+Position (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{traget\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Moves motor to the specified position. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & short traget\+Pos. Target position to be reached.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPololu_a1f24fec8da27e5e0e40fb24b88e70858}{Pololu}}.
+
+\mbox{\Hypertarget{classIPololu_a9012cab335e7e99147d43c1773019a50}\label{classIPololu_a9012cab335e7e99147d43c1773019a50}} 
+\index{IPololu@{IPololu}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!IPololu@{IPololu}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily virtual bool IPololu\+::set\+Speed (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{max\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the maximal speed of the specified servo motor. If an error occurs an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short servo\+ID. ID of the servo motor. \\
+\hline
+{\em unsigned} & max\+Speed. Maximal speed value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short is undefined. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPololu_aa990539f5c36628ea0dde3b5c0618128}{Pololu}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Pololu.\+hpp\end{DoxyCompactItemize}

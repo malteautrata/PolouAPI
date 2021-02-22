@@ -1,0 +1,13 @@
+digraph "UnitTest"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="UnitTest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Implements the unit test class."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TestSuite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTestSuite.html",tooltip="This class implements a test suite for unit testing."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TestItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTestItem.html",tooltip="Implementation of the core functions for all derived classes of the unit test framework."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ITestItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classITestItem.html",tooltip="Interface class of unit testing classes. In general a test item conaitns either a a specific test or ..."];
+}

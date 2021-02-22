@@ -1,0 +1,72 @@
+\hypertarget{classTestSuite}{}\doxysection{Test\+Suite Class Reference}
+\label{classTestSuite}\index{TestSuite@{TestSuite}}
+
+
+This class implements a test suite for unit testing.  
+
+
+
+
+{\ttfamily \#include $<$Simpl\+Unit\+Test\+FW.\+hpp$>$}
+
+
+
+Inheritance diagram for Test\+Suite\+:
+% FIG 0
+
+
+Collaboration diagram for Test\+Suite\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTestSuite_a5309d020ff1ed9d03e5449cf919fbba0}\label{classTestSuite_a5309d020ff1ed9d03e5449cf919fbba0}} 
+{\bfseries Test\+Suite} (string s=string(\char`\"{}undefined test suite\char`\"{}))
+\item 
+\mbox{\Hypertarget{classTestSuite_a645971bdb8d1c5db7dfe04342b9b9891}\label{classTestSuite_a645971bdb8d1c5db7dfe04342b9b9891}} 
+virtual void \mbox{\hyperlink{classTestSuite_a645971bdb8d1c5db7dfe04342b9b9891}{test\+Execution}} ()
+\begin{DoxyCompactList}\small\item\em This method executes all test cases stored in the test suite. The results of all test executions are collected and the overall test results of the test suite is stored. The overall result of the test suite is true if and only if all test cases have result true. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{classTestSuite_a2faf6da1dc91bb6547c4283c58841d91}{to\+Xml\+Str}} ()
+\begin{DoxyCompactList}\small\item\em Returns specific output format of the single test result for documentation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTestSuite_a8b49a96c0a7ad3f647be43956b3e060a}\label{classTestSuite_a8b49a96c0a7ad3f647be43956b3e060a}} 
+virtual void {\bfseries add\+Test\+Item} (\mbox{\hyperlink{classTestItem}{Test\+Item}} $\ast$tc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTestSuite_a5ae02233985f2a432a0060b7cb4628c3}\label{classTestSuite_a5ae02233985f2a432a0060b7cb4628c3}} 
+\mbox{\hyperlink{classQueue}{Queue}}$<$ \mbox{\hyperlink{classTestItem}{Test\+Item}} $\ast$ $>$ {\bfseries test\+Items\+\_\+}
+\item 
+\mbox{\Hypertarget{classTestSuite_a39e959323f0ccb5baedd5517493793e3}\label{classTestSuite_a39e959323f0ccb5baedd5517493793e3}} 
+string {\bfseries test\+Type\+\_\+} = \char`\"{}Test\+Suite\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements a test suite for unit testing. 
+
+A test suite is a collection of test cases that usually belong to a test of test of one method of a class under testing. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTestSuite_a2faf6da1dc91bb6547c4283c58841d91}\label{classTestSuite_a2faf6da1dc91bb6547c4283c58841d91}} 
+\index{TestSuite@{TestSuite}!toXmlStr@{toXmlStr}}
+\index{toXmlStr@{toXmlStr}!TestSuite@{TestSuite}}
+\doxysubsubsection{\texorpdfstring{toXmlStr()}{toXmlStr()}}
+{\footnotesize\ttfamily virtual string Test\+Suite\+::to\+Xml\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns specific output format of the single test result for documentation. 
+
+\begin{DoxyReturn}{Returns}
+string contains the output for test documentation. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classITestItem_a6f6457efebeabf2404e4ca6f207b3c51}{ITest\+Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simpl\+Unit\+Test\+FW.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,206 @@
+\hypertarget{classServoMotorPololuBase}{}\doxysection{Servo\+Motor\+Pololu\+Base Class Reference}
+\label{classServoMotorPololuBase}\index{ServoMotorPololuBase@{ServoMotorPololuBase}}
+
+
+Class implements the interface \mbox{\hyperlink{classIServoMotorBase}{IServo\+Motor\+Base}} based on the pololu controller board (\href{https://www.pololu.com/docs/pdf/0J40/maestro.pdf}{\texttt{ https\+://www.\+pololu.\+com/docs/pdf/0\+J40/maestro.\+pdf}}).  
+
+
+
+
+{\ttfamily \#include $<$Servo\+Motor.\+hpp$>$}
+
+
+
+Inheritance diagram for Servo\+Motor\+Pololu\+Base\+:
+% FIG 0
+
+
+Collaboration diagram for Servo\+Motor\+Pololu\+Base\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServoMotorPololuBase_a704e0d2ed744a86138f2eafaaab37c75}{Servo\+Motor\+Pololu\+Base}} (unsigned short servo\+ID, unsigned short neutral\+Pos, unsigned short delta, \mbox{\hyperlink{classIPololu}{IPololu}} $\ast$pololu\+Controller)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. In case of an error an exception is thrown. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_a07f6185529860c8dcd7949cfa1eea988}{get\+Servo\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Delivers the ID of the servo motor instance. This ID might related to certain connectors of the board / HW used to control the servo motor. This must be specified in the actual implementation of this inteface by the derived classes. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_a97f0632cea849ccf8e0295dd33b64143}{get\+Min\+Pos\+In\+Abs}} ()
+\begin{DoxyCompactList}\small\item\em Delivers the minimal position value the servo motor can / shall move to. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_a94b79ecee512152fe886742e90a45b20}{get\+Mid\+Pos\+In\+Abs}} ()
+\begin{DoxyCompactList}\small\item\em Delivers the position value in units for the so called neutral position of a servo motor given in units. This position might specifically defined by the developer for specific servo motors. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_a922ad1f34f5f658a3b5852664e58dce5}{get\+Max\+Pos\+In\+Abs}} ()
+\begin{DoxyCompactList}\small\item\em Delivers the maximal position value the servo motor can / shall move to. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_a813192563036e493779e03b576f06c8f}{set\+Position\+In\+Abs}} (unsigned short new\+Position)
+\begin{DoxyCompactList}\small\item\em Moves the servo motor to the given position. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_aa9f364c50b0291f53acd4c307a1cf25f}{get\+Position\+In\+Abs}} ()
+\begin{DoxyCompactList}\small\item\em Delivers the position value (in units) the servo trageted at. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServoMotorPololuBase_a204c385003ebf036b0a596e0e1889f3d}\label{classServoMotorPololuBase_a204c385003ebf036b0a596e0e1889f3d}} 
+\mbox{\hyperlink{classIPololu}{IPololu}} $\ast$ \mbox{\hyperlink{classServoMotorPololuBase_a204c385003ebf036b0a596e0e1889f3d}{pololu\+Ctrl\+\_\+}} = NULL
+\begin{DoxyCompactList}\small\item\em Pointer to a API-\/object of the pololu controller (class \textbackslash{}\+IPololu). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServoMotorPololuBase_a67d2416adbef01d0122d0fca77c89d08}\label{classServoMotorPololuBase_a67d2416adbef01d0122d0fca77c89d08}} 
+unsigned int \mbox{\hyperlink{classServoMotorPololuBase_a67d2416adbef01d0122d0fca77c89d08}{servo\+Nmb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Index of the servo motor that identifies which slot / pin on the micro controller board the servo is connected with. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_a821799a66b3426f199bc02de91deb61b}{neutral\+Position\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Neutral position of the servo, usually defined by an impulse of 1\textquotesingle{}500 micro seconds impulse length. The position value is usually given by impulse length per one micro seconds. Using the pololu microcontroller to control the servor motor the impulse length is given per units of 1/4 of a quarter of the micro-\/second. Therefore, position here is defined impulse length per one micro second per 1/4 micro second. Thus, position value = impulse lengths $\ast$ 4 (units). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServoMotorPololuBase_a159d12d7813ce04b4825e4be24e07a46}\label{classServoMotorPololuBase_a159d12d7813ce04b4825e4be24e07a46}} 
+unsigned short \mbox{\hyperlink{classServoMotorPololuBase_a159d12d7813ce04b4825e4be24e07a46}{delta\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Defines the range of positions values. Starting from the neutral positions +/-\/ delta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class implements the interface \mbox{\hyperlink{classIServoMotorBase}{IServo\+Motor\+Base}} based on the pololu controller board (\href{https://www.pololu.com/docs/pdf/0J40/maestro.pdf}{\texttt{ https\+://www.\+pololu.\+com/docs/pdf/0\+J40/maestro.\+pdf}}). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classServoMotorPololuBase_a704e0d2ed744a86138f2eafaaab37c75}\label{classServoMotorPololuBase_a704e0d2ed744a86138f2eafaaab37c75}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{ServoMotorPololuBase()}{ServoMotorPololuBase()}}
+{\footnotesize\ttfamily Servo\+Motor\+Pololu\+Base\+::\+Servo\+Motor\+Pololu\+Base (\begin{DoxyParamCaption}\item[{unsigned short}]{servo\+ID,  }\item[{unsigned short}]{neutral\+Pos,  }\item[{unsigned short}]{delta,  }\item[{\mbox{\hyperlink{classIPololu}{IPololu}} $\ast$}]{pololu\+Controller }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor. In case of an error an exception is thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+ID} & unsigned short. Index ($>$= 0) of the servo motor that identifies which slot / pin on the micro controller board the servo is connected with.\\
+\hline
+{\em neutral\+Pos} & unsigned short. (neutral\+Pos $>$ 0) Neutral position of the servo, usually defined by an impulse of 1\textquotesingle{}500 micro seconds impulse length. The position value is usually given by impulse length per one micro seconds. Using the pololu micro-\/controller to control the servor motor the impulse length is given per units of 1/4 of a quarter of the micro-\/second. Therefore, position here is defined impulse length per one micro second per 1/4 micro second. Thus, position value = impulse lengths $\ast$ 4 (units). See \mbox{\hyperlink{classPololu}{Pololu}} manual for further explanations.\\
+\hline
+{\em delta} & unsigned short. (delta $<$ neutral\+Pos) Defines the range of positions values, starting from the neutral positions +/-\/ delta.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}\param *pololuController. Pointer to a pololu instance that controls the servo motors.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classServoMotorPololuBase_a922ad1f34f5f658a3b5852664e58dce5}\label{classServoMotorPololuBase_a922ad1f34f5f658a3b5852664e58dce5}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!getMaxPosInAbs@{getMaxPosInAbs}}
+\index{getMaxPosInAbs@{getMaxPosInAbs}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{getMaxPosInAbs()}{getMaxPosInAbs()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+::get\+Max\+Pos\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delivers the maximal position value the servo motor can / shall move to. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotorBase_a54e60e6ce8aeaf57297a8f4ecfb88c1f}{IServo\+Motor\+Base}}.
+
+\mbox{\Hypertarget{classServoMotorPololuBase_a94b79ecee512152fe886742e90a45b20}\label{classServoMotorPololuBase_a94b79ecee512152fe886742e90a45b20}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!getMidPosInAbs@{getMidPosInAbs}}
+\index{getMidPosInAbs@{getMidPosInAbs}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{getMidPosInAbs()}{getMidPosInAbs()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+::get\+Mid\+Pos\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delivers the position value in units for the so called neutral position of a servo motor given in units. This position might specifically defined by the developer for specific servo motors. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotorBase_a0b5325efc343b497c78d8681df8e3f9a}{IServo\+Motor\+Base}}.
+
+\mbox{\Hypertarget{classServoMotorPololuBase_a97f0632cea849ccf8e0295dd33b64143}\label{classServoMotorPololuBase_a97f0632cea849ccf8e0295dd33b64143}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!getMinPosInAbs@{getMinPosInAbs}}
+\index{getMinPosInAbs@{getMinPosInAbs}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{getMinPosInAbs()}{getMinPosInAbs()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+::get\+Min\+Pos\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delivers the minimal position value the servo motor can / shall move to. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotorBase_afd68bee685b231b135de34596cf29157}{IServo\+Motor\+Base}}.
+
+\mbox{\Hypertarget{classServoMotorPololuBase_aa9f364c50b0291f53acd4c307a1cf25f}\label{classServoMotorPololuBase_aa9f364c50b0291f53acd4c307a1cf25f}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!getPositionInAbs@{getPositionInAbs}}
+\index{getPositionInAbs@{getPositionInAbs}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{getPositionInAbs()}{getPositionInAbs()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+::get\+Position\+In\+Abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delivers the position value (in units) the servo trageted at. 
+
+\begin{DoxyReturn}{Returns}
+unsigned short. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotorBase_ac13b41148677835c59465b2c142a2ad4}{IServo\+Motor\+Base}}.
+
+\mbox{\Hypertarget{classServoMotorPololuBase_a07f6185529860c8dcd7949cfa1eea988}\label{classServoMotorPololuBase_a07f6185529860c8dcd7949cfa1eea988}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!getServoNumber@{getServoNumber}}
+\index{getServoNumber@{getServoNumber}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{getServoNumber()}{getServoNumber()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+::get\+Servo\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delivers the ID of the servo motor instance. This ID might related to certain connectors of the board / HW used to control the servo motor. This must be specified in the actual implementation of this inteface by the derived classes. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int number of the connector of the servo motor on the board. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotorBase_ad1f8ddf05981ea5ae282b4647d209f70}{IServo\+Motor\+Base}}.
+
+\mbox{\Hypertarget{classServoMotorPololuBase_a813192563036e493779e03b576f06c8f}\label{classServoMotorPololuBase_a813192563036e493779e03b576f06c8f}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!setPositionInAbs@{setPositionInAbs}}
+\index{setPositionInAbs@{setPositionInAbs}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{setPositionInAbs()}{setPositionInAbs()}}
+{\footnotesize\ttfamily unsigned short Servo\+Motor\+Pololu\+Base\+::set\+Position\+In\+Abs (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the servo motor to the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & unsigned short position value given in units.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short actual position set given in units. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServoMotorBase_a97cd1849a661c4dcf8aac791de0a6d59}{IServo\+Motor\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classServoMotorPololuBase_a821799a66b3426f199bc02de91deb61b}\label{classServoMotorPololuBase_a821799a66b3426f199bc02de91deb61b}} 
+\index{ServoMotorPololuBase@{ServoMotorPololuBase}!neutralPosition\_@{neutralPosition\_}}
+\index{neutralPosition\_@{neutralPosition\_}!ServoMotorPololuBase@{ServoMotorPololuBase}}
+\doxysubsubsection{\texorpdfstring{neutralPosition\_}{neutralPosition\_}}
+{\footnotesize\ttfamily Servo\+Motor\+Pololu\+Base\+::neutral\+Position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Neutral position of the servo, usually defined by an impulse of 1\textquotesingle{}500 micro seconds impulse length. The position value is usually given by impulse length per one micro seconds. Using the pololu microcontroller to control the servor motor the impulse length is given per units of 1/4 of a quarter of the micro-\/second. Therefore, position here is defined impulse length per one micro second per 1/4 micro second. Thus, position value = impulse lengths $\ast$ 4 (units). 
+
+See \mbox{\hyperlink{classPololu}{Pololu}} manual for further explanations. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Servo\+Motor.\+hpp\item 
+Servo\+Motor.\+cpp\end{DoxyCompactItemize}
